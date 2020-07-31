@@ -1,0 +1,322 @@
+.wrapper {
+    position: relative;
+    top: 0;
+    height: 100vh;
+}
+
+.bg-aw {
+    background-color: #f0f8ff;
+}
+
+.bg-brown {
+    background-color: #795548;
+}
+
+
+/* ---------------------
+    HEAd STYLE
+------------------------ */
+
+.section-head {
+    position: relative;
+    height: 360px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.section-background {
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: rgb(121, 85, 72);
+    background: linear-gradient(90deg, rgba(121, 85, 72, 1) 0%, rgba(137, 96, 82, 1) 35%, rgba(193, 133, 112, 1) 71%);
+}
+
+.section-separator {
+    position: absolute;
+    top: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    overflow: hidden;
+    pointer-events: none;
+    bottom: 0;
+    height: 60px;
+}
+
+.section-separator svg {
+    position: absolute;
+    pointer-events: none
+}
+
+svg.separator {
+    overflow: hidden;
+    vertical-align: middle;
+    position: absolute;
+    pointer-events: none;
+    bottom: 0;
+}
+
+.fill {
+    fill: #f0f8ff;
+}
+
+.over {
+    position: absolute;
+    margin-top: -100px;
+    z-index: 4;
+}
+
+.shadow {
+    box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07) !important;
+}
+
+[class*="shadow"] {
+    transition: all 0.15s ease;
+}
+
+.card-img img {
+    position: absolute;
+    top: -20px;
+    height: 150px;
+    max-width: 180px;
+    border-radius: .25rem;
+    -webkit-transform: translate(-50%, -30%);
+    transform: translate(-50%, -30%);
+    position: absolute;
+    left: 50%;
+    transition: all .15s ease;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07)!important;
+}
+
+
+/* ---------------------
+    MARGINS
+------------------------ */
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-3 {
+    margin-top: 3.5rem;
+}
+
+.mt-7 {
+    margin-top: 7.5rem;
+}
+
+.mt-12 {
+    margin-top: 12.5rem;
+}
+
+.mt-18 {
+    margin-top: 18rem;
+}
+
+
+/* ---------------------
+    TIMELINE
+------------------------ */
+
+.timeline {
+    margin-top: 15px;
+    width: 100%;
+    height: auto;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    height: 90%;
+    width: 2px;
+    background: #00bcd4;
+    left: 0px;
+}
+
+.timeline ul {
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.timeline li {
+    background: #ffffff;
+    position: relative;
+    width: 95%;
+    margin-bottom: 20px;
+}
+
+.timeline li i {
+    font-size: 25px;
+    color: #00bcd4;
+    position: absolute;
+    top: -11px;
+}
+
+.timeline li:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 1em solid #795548;
+    border-left: 1em solid transparent;
+    position: absolute;
+    left: -1em;
+    top: 0;
+}
+
+@media screen and (max-width:480px) {
+    .timeline:before {
+        display: none
+    }
+    .timeline li:before {
+        display: none;
+    }
+    .timeline li i {
+        display: none;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .timeline:before {
+        display: none
+    }
+    .timeline li:before {
+        display: none;
+    }
+    .timeline li i {
+        display: none;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .timeline:before {
+        left: 50%;
+    }
+    .timeline ul {
+        padding-left: 0;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .timeline li {
+        left: 0;
+        width: 43%;
+    }
+    .timeline li:nth-child(even) {
+        float: right;
+        margin-top: 70px;
+    }
+    .timeline li:nth-child(even):before {
+        border-top: 2em solid #795548;
+        border-left: 2em solid transparent;
+        position: absolute;
+        left: -2em;
+        top: 0;
+    }
+    .timeline li:nth-child(even) i {
+        position: absolute;
+        left: -19%;
+    }
+    .timeline li:nth-child(odd) {
+        float: left;
+    }
+    .timeline li:nth-child(odd):before {
+        border-top: 2em solid #795548;
+        border-right: 2em solid transparent;
+        right: -2em;
+        left: auto;
+    }
+    .timeline li:nth-child(odd) i {
+        position: absolute;
+        left: 114.25%;
+    }
+    .timeline li:nth-of-type(2n+1) {
+        clear: both;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1001px) {
+    .timeline li:nth-child(even) i {
+        left: -21%;
+    }
+    .timeline li:nth-child(odd) i {
+        left: 113%;
+    }
+}
+
+.timeline-content .timeline-header {
+    width: 100%;
+    height: auto;
+    background-color: #795548;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.timeline-content h3 {
+    padding: .5rem 1rem;
+    line-height: 30px;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 400;
+    background-color: #795548;
+}
+
+.timeline-content .sub-heading {
+    text-decoration: none;
+    color: #795548;
+    padding: 0 20px;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+.content-wrapper {
+    width: 100%;
+    height: auto;
+    padding: 25px 20px;
+}
+
+.skill-wrapper {
+    background-color: #795548;
+    color: #ffffff;
+}
+
+.skill-progress-div {
+    margin-bottom: 22px;
+}
+
+.skill-progress-div p {
+    color: #ffffff;
+}
+
+.skill-progress-div p span {
+    float: right;
+}
+
+.skill-progress {
+    position: relative;
+    background-color: #49332b;
+    margin: 15px 0;
+    height: 3px;
+    z-index: 0;
+    overflow: visible;
+}
+
+.skill-determinate {
+    position: absolute;
+    height: 3px;
+    background-color: #ffffff;
+}
+
+.skill-determinate .skill-determinate-circle {
+    position: absolute;
+    right: 0%;
+    top: -7px;
+    color: #ffffff;
+    font-size: 18px;
+}
