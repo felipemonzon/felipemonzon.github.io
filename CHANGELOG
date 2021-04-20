@@ -1,5 +1,11 @@
 CHANGELOG
 version: 1.0.1
-autor: Felipe Monzon
-fecha: 29/June/2020 
-descripcion: Se inicia control de cambios
+author: Felipe Monzon
+date: 29/June/2020
+description: Se inicia control de cambios
+
+version: 1.0.2
+author: Felipe Monzon
+date: 19/April/2021
+description: Se actualiza contenido de experiencia
+
